@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./css/styles.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;600&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="content">
@@ -24,7 +24,97 @@
                 <img class="header-image" src="assets/header-image.png">
             </div>
         </section>
+        <section class="main">
+            <div class="rules">
+                <h3 class="rules-header" id="rules-header"></h3>
+                <div class="rules-point">
+                    <div class="rules-point-header" id="objective-header"></div>
+                    <div class="rules-point-content">
+                        <p class="rules-plaintext" id="objective-content"></p>
+                    </div>
+                </div>
+                <div class="rules-point">
+                    <div class="rules-point-header" id="gear-header"></div>
+                    <div class="rules-point-content">
+                        <p class="rules-plaintext" id="gear-content"></p>
+                    </div>
+                </div>
+                <div class="rules-point">
+                    <div class="rules-point-header" id="scoring-header"></div>
+                    <div class="rules-point-content" id="scoring-content">
+                        <p class="rules-plaintext" id="scoring-subheader"></p>
+                        <p class="scoring-point">
+                            <span class="scoring-point-kill-count" id="scoring-point-kill-count-1"></span>
+                            <span class="delimiter"> - </span>
+                            <span class="scoring-point-points" id="scoring-point-points-1"></span>
+                        </p>
+                        <p class="scoring-point">
+                            <span class="scoring-point-kill-count" id="scoring-point-kill-count-2"></span>
+                            <span class="delimiter"> - </span>
+                            <span class="scoring-point-points" id="scoring-point-points-2"></span>
+                        </p>
+                        <p class="scoring-point">
+                            <span class="scoring-point-kill-count" id="scoring-point-kill-count-3"></span>
+                            <span class="delimiter"> - </span>
+                            <span class="scoring-point-points" id="scoring-point-points-3"></span>
+                        </p>
+                        <p class="scoring-point">
+                            <span class="scoring-point-kill-count" id="scoring-point-kill-count-4"></span>
+                            <span class="delimiter"> - </span>
+                            <span class="scoring-point-points" id="scoring-point-points-4"></span>
+                        </p>
+                        <p class="scoring-point">
+                            <span class="scoring-point-kill-count" id="scoring-point-kill-count-5"></span>
+                            <span class="delimiter"> - </span>
+                            <span class="scoring-point-points" id="scoring-point-points-5"></span>
+                        </p>
+                        <p class="scoring-point">
+                            <span class="scoring-point-kill-count" id="scoring-point-kill-count-6"></span>
+                            <span class="delimiter"> - </span>
+                            <span class="scoring-point-points" id="scoring-point-points-6"></span>
+                        </p>
+                        <p class="scoring-hint" id="scoring-hint-1"></p>
+                        <p class="scoring-hint" id="scoring-hint-2"></p>
+                    </div>
+                </div>
+                <div class="rules-point">
+                    <div class="rules-point-header" id="applying-header"></div>
+                    <div class="rules-point-content" id="applying-content">
+                        <p class="rules-plaintext" id="applying-subheader"></p>
+                        <ul class="rules-unordered-list" id="applying-list">
+                            <li class="rules-unordered-list-point" id="applying-point-1">
+                                <span id="applying-point-1-plaintext"></span>
+                                <span class="applying-point-1-styled-text" id="applying-list-first-point-styled-text"></span>
+                            </li>
+                            <li class="rules-unordered-list-point" id="applying-point-2"></li>
+                            <li class="rules-unordered-list-point" id="applying-point-3"></li>
+                            <li class="rules-unordered-list-point" id="applying-point-4"></li>
+                            <li class="rules-unordered-list-point" id="applying-point-5"></li>
+                            <li class="rules-unordered-list-point" id="applying-point-6"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rules-point">
+                    <div class="rules-point-header" id="requirements-header"></div>
+                    <div class="rules-point-content" id="requirements-content">
+                        <ul class="rules-unordered-list">
+                            <li class="rules-unordered-list-point" id="requirements-point-1"></li>
+                            <li class="rules-unordered-list-point" id="requirements-point-2"></li>
+                            <li class="rules-unordered-list-point" id="requirements-point-3"></li>
+                            <li class="rules-unordered-list-point" id="requirements-point-4"></li>
+                            <li class="rules-unordered-list-point" id="requirements-point-5"></li>
+                            <li class="rules-unordered-list-point" id="requirements-point-6"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="additional-info">
+                <div class="timing-info"></div>
+                <div class="location"></div>
+                <button class="main-apply-button" id="main-apply-button"></button>
+            </div>
+        </section>
     </div>
     <script src="scripts/script.js"></script>
-  </body
+  </body>
 </html>

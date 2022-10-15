@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #222222;
+  background-color: #222;
   padding-top: 2rem;
 }
 body .content {
@@ -26,7 +26,7 @@ body .content .header-text {
 }
 body .content .header-text-qualifications {
   background-color: #363636;
-  color: #FFC165;
+  color: #ffc165;
   padding: 0.25rem 1rem;
   margin-bottom: 0;
   border-radius: 0.25rem;
@@ -37,18 +37,18 @@ body .content .header-text-qualifications {
   width: max-content;
 }
 body .content .header-text-tournament {
-  color: #00B285;
+  color: #00b285;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 body .content .header-text-categories .category {
-  color: #C9C9C9;
+  color: #c9c9c9;
   font-size: 1.5rem;
   margin: 0;
 }
 body .content .header-apply-button {
-  color: #FFF;
-  background-color: #00B285;
+  color: #fff;
+  background-color: #00b285;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -56,15 +56,76 @@ body .content .header-apply-button {
   margin-top: auto;
   border-radius: 0.25rem;
 }
+body .content .header-apply-button:hover {
+  cursor: pointer;
+}
 body .content .header-image-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 29rem;
-  background: linear-gradient(0deg, #00B285, #222222 50%);
+  background: linear-gradient(0deg, #00b285, #222 50%);
   border-radius: 0.5rem;
   padding: 0;
 }
 body .content .header-image-container .header-image {
   width: 25rem;
+}
+body .content .main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body .content .main .rules {
+  display: flex;
+  flex-direction: column;
+}
+body .content .main .rules-header {
+  color: #00b285;
+  font-size: 1.5rem;
+}
+body .content .main .rules-point {
+  margin-bottom: 1.5rem;
+}
+body .content .main .rules-point-header {
+  color: #ceC7a6;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+body .content .main .rules-plaintext, body .content .main .rules .scoring-hint {
+  font-size: 0.75rem;
+  font-weight: 200;
+}
+body .content .main .rules-plaintext {
+  color: #c9c9c9;
+  margin: 0;
+}
+body .content .main .rules .scoring-hint {
+  color: #ababab;
+  font-style: italic;
+}
+body .content .main .rules .scoring-point {
+  margin: 0;
+}
+body .content .main .rules .scoring-point-kill-count, body .content .main .rules .scoring-point-points {
+  font-size: 0.75rem;
+}
+body .content .main .rules .scoring-point-kill-count {
+  color: #00b285;
+}
+body .content .main .rules .scoring-point-points {
+  color: #ffc165;
+}
+body .content .main .rules .scoring-point .delimiter {
+  color: #c9c9c9;
+}
+body .content .main .rules-unordered-list {
+  list-style-type: "- ";
+  margin: 0;
+  padding-left: 0.5rem;
+}
+body .content .main .rules-unordered-list-point {
+  color: #c9c9c9;
+  font-weight: 200;
+  font-size: 0.75rem;
 }/*# sourceMappingURL=styles.css.map */

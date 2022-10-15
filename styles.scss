@@ -22,6 +22,7 @@ $default-offset-half: calc($default-offset / 2);
 $default-offset-quarter: calc($default-offset / 4);
 $default-offset-double: $default-offset * 2;
 $offset-small: $default-offset * 0.75;
+$offset-medium: $default-offset * 1.5;
 $offset-big: $default-offset * 3;
 $offset-large: $default-offset * 4;
 
@@ -38,6 +39,15 @@ $border-radius-small: calc($default-border-radius / 2);
 $header-image-width: 25rem;
 $header-image-container-width: $header-image-width + $offset-large;
 
+$dark-gray: #222;
+$orange: #ffc165;
+$lightgreen: #00b285;
+$light-gray: #c9c9c9;
+$gray: #363636;
+$white: #fff;
+$beige: #ceC7a6;
+$hint-text-color: #ababab;
+
 * {
     font-family: 'Inter', sans-serif;
     transition-duration: 0.5s;
@@ -45,7 +55,7 @@ $header-image-container-width: $header-image-width + $offset-large;
 }
 
 body {
-    background-color: #222222;
+    background-color: $dark-gray;
     padding-top: $default-offset-double;
     
     .content {
@@ -61,8 +71,8 @@ body {
                 @include flex-column;
 
                 &-qualifications {
-                    background-color: #363636;
-                    color: #FFC165;
+                    background-color: $gray;
+                    color: $orange;
                     padding: $default-offset-quarter $default-offset;
                     margin-bottom: 0;
                     border-radius: $default-border-radius;
@@ -72,7 +82,7 @@ body {
                 }
     
                 &-tournament {
-                    color: #00B285;
+                    color: $lightgreen;
                     font-size: $font-size-large;
                     margin-bottom: $default-offset;
                 }
@@ -80,7 +90,7 @@ body {
                 &-categories {
     
                     .category {
-                        color: #C9C9C9;
+                        color: $light-gray;
                         font-size: $font-size-big;
                         margin: 0;
                     }
@@ -88,24 +98,98 @@ body {
             }
 
             &-apply-button {
-                color: #FFF;
-                background-color: #00B285;
+                color: $white;
+                background-color: $lightgreen;
                 width: max-content;
                 padding: $offset-small $default-offset-double;
                 margin-top: auto;
                 border-radius: $default-border-radius;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
 
             &-image-container {
                 @include flex-centered;
 
                 width: $header-image-container-width;
-                background: linear-gradient(0deg, #00B285, #222222 50%);
+                background: linear-gradient(0deg, $lightgreen, $dark-gray 50%);
                 border-radius: $border-radius-medium;
                 padding: 0;
 
                 .header-image {
                     width: $header-image-width;
+                }
+            }
+        }
+
+        .main {
+            @include flex-row;
+
+            .rules {
+                @include flex-column;
+
+                &-header {
+                    color: $lightgreen;
+                    font-size: $font-size-big;
+                }
+
+                &-point {
+                    margin-bottom: $offset-medium;
+
+                    &-header {
+                        color: $beige;
+                        font-size: $default-font-size;
+                        margin-bottom: $default-offset;
+                    }
+                }
+
+                &-plaintext, .scoring-hint {
+                    font-size: $font-size-small;
+                    font-weight: 200;
+                }
+
+                &-plaintext {
+                    color: $light-gray;
+                    margin: 0;
+                }
+
+                .scoring-hint {
+                    color: $hint-text-color;
+                    font-style: italic;
+                }
+                
+                .scoring-point {
+                    margin: 0;
+
+                    &-kill-count, &-points {
+                        font-size: $font-size-small;
+                    }
+    
+                    &-kill-count {
+                        color: $lightgreen;
+                    }
+    
+                    &-points {
+                        color: $orange;
+                    }
+
+                    .delimiter {
+                        color: $light-gray;
+                    }
+                }
+
+                &-unordered-list {
+                    list-style-type: "- ";
+                    margin: 0;
+                    padding-left: $default-offset-half;
+
+                    &-point {
+                        color: $light-gray;
+                        font-weight: 200;
+                        font-size: $font-size-small;
+                    }
                 }
             }
         }
