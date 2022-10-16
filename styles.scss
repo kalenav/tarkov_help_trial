@@ -15,6 +15,18 @@
     align-items: center;
 }
 
+@mixin unordered-list {
+    list-style-type: "- ";
+    margin: 0;
+    padding-left: $default-offset-half;
+
+    &-point {
+        color: $light-gray;
+        font-weight: 200;
+        font-size: $font-size-small;
+    }
+}
+
 $content-width: 60%;
 
 $default-offset: 1rem;
@@ -41,7 +53,15 @@ $border-radius-small: calc($default-border-radius / 2);
 $header-image-width: 25rem;
 $header-image-container-width: $header-image-width + $offset-large;
 
-$additional-info-container-width: 35%;
+$additional-info-container-min-width: 20rem;
+$additional-info-container-max-width: 25rem;
+
+$places-number: 4;
+$place-and-sponsor-width: calc((100% / #{$places-number}) - 2%);
+
+$additional-rewards-list-height: 3rem;
+
+$default-transition-duration: 0.5s;
 
 $dark-gray: #222;
 $orange: #ffc165;
@@ -54,7 +74,7 @@ $hint-text-color: #ababab;
 
 * {
     font-family: 'Inter', sans-serif;
-    transition-duration: 0.5s;
+    transition-duration: $default-transition-duration;
     box-sizing: border-box;
 }
 
@@ -148,7 +168,7 @@ body {
 
                     &-header {
                         color: $beige;
-                        font-size: $default-font-size;
+                        font-size: $font-size-medium;
                         margin-bottom: $default-offset;
                     }
                 }
@@ -189,15 +209,7 @@ body {
                 }
 
                 &-unordered-list {
-                    list-style-type: "- ";
-                    margin: 0;
-                    padding-left: $default-offset-half;
-
-                    &-point {
-                        color: $light-gray;
-                        font-weight: 200;
-                        font-size: $font-size-small;
-                    }
+                    @include unordered-list;
                 }
 
                 .applying-point-1-styled-text {
@@ -209,7 +221,8 @@ body {
             .additional-info {
                 @include flex-column;
                 align-items: flex-end;
-                width: $additional-info-container-width;
+                max-width: $additional-info-container-max-width;
+                min-width: $additional-info-container-min-width;
                 margin-left: $default-offset-double;
 
                 &-item {
@@ -273,14 +286,121 @@ body {
                 }
 
                 .main-apply-button {
+                    @include flex-centered;
+
                     color: $lightgreen;
                     background-color: rgba(0, 0, 0, 0);
                     border: solid $lightgreen $default-border-width;
-                    padding: $offset-small $default-offset-double;
+                    padding: $offset-small 0;
                     border-radius: $default-border-radius;
+                    min-width: 66%;
     
                     &:hover {
                         cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .footer {
+            @include flex-column;
+
+            &-point {
+                margin-bottom: $offset-medium;
+
+                &-header {
+                    font-size: $font-size-medium;
+                    margin-bottom: $default-offset;
+                    color: $beige;
+                }
+
+                .rewards {
+
+                    &-by-place {
+                        @include flex-row;
+                        justify-content: space-between;
+
+                        .place {
+                            padding: $default-offset-half $default-offset;
+                            border-radius: $default-border-radius;
+                            background-color: $gray;
+                            width: $place-and-sponsor-width;
+
+                            &-header {
+                                color: $lightgreen;
+                                margin: $default-offset-quarter 0;
+                            }
+    
+                            &-reward {
+                                color: $orange;
+                                margin: $default-offset-quarter 0;
+                                font-weight: 300;
+                                font-size: $font-size-medium;
+                            }
+                        }
+                    }
+                }
+
+                .additional-rewards {
+                    width: 100%;
+                    background-color: $gray;
+                    border-radius: $default-border-radius;
+                    padding: $offset-small $default-offset;
+                    margin-top: $default-offset;
+
+                    &-header {
+                        margin: 0;
+                        color: $beige;
+                        font-weight: 300;
+                    }
+
+                    &-list {
+                        @include unordered-list;
+
+                        height: 0;
+                        visibility: hidden;
+
+                        &-point {
+                            transition-duration: 0s;
+                            opacity: 0;
+                        }
+
+                        &.displayed {
+                            height: $additional-rewards-list-height;
+                            visibility: visible;
+                            margin-top: $default-offset;
+
+                            .additional-rewards-list-point {
+                                transition-duration: $default-transition-duration;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                                            
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                .sponsors {
+                    @include flex-row;
+
+                    .sponsor {
+                        @include flex-row;
+
+                        justify-content: flex-start;
+                        width: $place-and-sponsor-width;
+                        border-radius: $default-border-radius;
+                        background-color: $gray;
+                        padding: $offset-small;
+
+                        &-image {
+                            margin-right: $default-offset;
+                        }
+
+                        &-name {
+                            color: $lightgreen;
+                        }
                     }
                 }
             }

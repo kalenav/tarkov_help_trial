@@ -92,7 +92,7 @@ body .content .main .rules-point {
 }
 body .content .main .rules-point-header {
   color: #cec7a6;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 body .content .main .rules-plaintext, body .content .main .rules .scoring-hint {
@@ -140,7 +140,8 @@ body .content .main .additional-info {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 35%;
+  max-width: 25rem;
+  min-width: 20rem;
   margin-left: 2rem;
 }
 body .content .main .additional-info-item {
@@ -192,12 +193,111 @@ body .content .main .additional-info .location-text-block-header, body .content 
   margin: 0.25rem 0;
 }
 body .content .main .additional-info .main-apply-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #00b285;
   background-color: rgba(0, 0, 0, 0);
   border: solid #00b285 0.1rem;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 0;
   border-radius: 0.25rem;
+  min-width: 66%;
 }
 body .content .main .additional-info .main-apply-button:hover {
   cursor: pointer;
+}
+body .content .footer {
+  display: flex;
+  flex-direction: column;
+}
+body .content .footer-point {
+  margin-bottom: 1.5rem;
+}
+body .content .footer-point-header {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #cec7a6;
+}
+body .content .footer-point .rewards-by-place {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: space-between;
+}
+body .content .footer-point .rewards-by-place .place {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: #363636;
+  width: calc((100% / 4) - 2%);
+}
+body .content .footer-point .rewards-by-place .place-header {
+  color: #00b285;
+  margin: 0.25rem 0;
+}
+body .content .footer-point .rewards-by-place .place-reward {
+  color: #ffc165;
+  margin: 0.25rem 0;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+body .content .footer-point .additional-rewards {
+  width: 100%;
+  background-color: #363636;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+}
+body .content .footer-point .additional-rewards-header {
+  margin: 0;
+  color: #cec7a6;
+  font-weight: 300;
+}
+body .content .footer-point .additional-rewards-list {
+  list-style-type: "- ";
+  margin: 0;
+  padding-left: 0.5rem;
+  height: 0;
+  visibility: hidden;
+}
+body .content .footer-point .additional-rewards-list-point {
+  color: #c9c9c9;
+  font-weight: 200;
+  font-size: 0.75rem;
+}
+body .content .footer-point .additional-rewards-list-point {
+  transition-duration: 0s;
+  opacity: 0;
+}
+body .content .footer-point .additional-rewards-list.displayed {
+  height: 3rem;
+  visibility: visible;
+  margin-top: 1rem;
+}
+body .content .footer-point .additional-rewards-list.displayed .additional-rewards-list-point {
+  transition-duration: 0.5s;
+  opacity: 1;
+}
+body .content .footer-point .additional-rewards:hover {
+  cursor: pointer;
+}
+body .content .footer-point .sponsors {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body .content .footer-point .sponsors .sponsor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: flex-start;
+  width: calc((100% / 4) - 2%);
+  border-radius: 0.25rem;
+  background-color: #363636;
+  padding: 0.75rem;
+}
+body .content .footer-point .sponsors .sponsor-image {
+  margin-right: 1rem;
+}
+body .content .footer-point .sponsors .sponsor-name {
+  color: #00b285;
 }/*# sourceMappingURL=styles.css.map */

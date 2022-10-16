@@ -48,6 +48,21 @@ const TournamentModule = (() => {
         'main-apply-button': 'Записаться на турнир',
         'location-header': 'Локация:',
         'location-text': 'Таможня',
+        'rewards-header': 'Награда победителям',
+        'first-place-header': '1 место',
+        'second-place-header': '2 место',
+        'third-place-header': '3 место',
+        'fourth-place-header': '4 место',
+        'first-place-reward': '25 000 \u20BD',
+        'second-place-reward': '14 000 \u20BD',
+        'third-place-reward': '8 000 \u20BD',
+        'fourth-place-reward': '3 000 \u20BD',
+        'additional-rewards-header': '+ дополнительные секретные призы победителям',
+        'sponsors-header': 'Спонсоры турнира',
+        'pepich-name': 'pep1ch',
+        'first-additional-reward': '5 видеокарточек :)',
+        'second-additional-reward': '10 мьёлниров :)',
+        'third-additional-reward': 'пака :)',
     }
 
     function appendTextToTag(id, text) {
@@ -60,8 +75,13 @@ const TournamentModule = (() => {
         }
     }
 
+    function toggleAdditionalRewards() {
+        document.getElementById('additional-rewards-list').classList.toggle('displayed');
+    }
+
     return {
         initPageText,
+        toggleAdditionalRewards,
     }
 })();
 

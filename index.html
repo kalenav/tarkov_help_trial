@@ -124,6 +124,46 @@
                 <button class="main-apply-button additional-info-item" id="main-apply-button"></button>
             </div>
         </section>
+        <section class="footer">
+            <div class="footer-point rewards">
+                <div class="footer-point-header" id="rewards-header"></div>
+                <div class="rewards-by-place">
+                    <div class="place">
+                        <h4 class="place-header" id="first-place-header"></h4>
+                        <p class="place-reward" id="first-place-reward"></p>
+                    </div>
+                    <div class="place">
+                        <h4 class="place-header" id="second-place-header"></h4>
+                        <p class="place-reward" id="second-place-reward"></p>
+                    </div>
+                    <div class="place">
+                        <h4 class="place-header" id="third-place-header"></h4>
+                        <p class="place-reward" id="third-place-reward"></p>
+                    </div>
+                    <div class="place">
+                        <h4 class="place-header" id="fourth-place-header"></h4>
+                        <p class="place-reward" id="fourth-place-reward"></p>
+                    </div>
+                </div>
+                <div class="additional-rewards" onclick="TournamentModule.toggleAdditionalRewards()">
+                    <p class="additional-rewards-header" id="additional-rewards-header"></p>
+                    <ul class="additional-rewards-list" id="additional-rewards-list">
+                        <li class="additional-rewards-list-point" id="first-additional-reward"></li>
+                        <li class="additional-rewards-list-point" id="second-additional-reward"></li>
+                        <li class="additional-rewards-list-point" id="third-additional-reward"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-point">
+                <div class="footer-point-header" id="sponsors-header"></div>
+                <div class="sponsors">
+                    <div class="sponsor">
+                        <img class="sponsor-image" src="assets/pepich_vnature.png">
+                        <p class="sponsor-name" id="pepich-name"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
     <script src="scripts/script.js"></script>
   </body>
