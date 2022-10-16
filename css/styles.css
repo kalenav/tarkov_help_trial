@@ -75,6 +75,7 @@ body .content .main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 2rem;
 }
 body .content .main .rules {
   display: flex;
@@ -83,12 +84,13 @@ body .content .main .rules {
 body .content .main .rules-header {
   color: #00b285;
   font-size: 1.5rem;
+  margin-top: 0;
 }
 body .content .main .rules-point {
   margin-bottom: 1.5rem;
 }
 body .content .main .rules-point-header {
-  color: #ceC7a6;
+  color: #cec7a6;
   font-size: 1rem;
   margin-bottom: 1rem;
 }
@@ -127,5 +129,25 @@ body .content .main .rules-unordered-list {
 body .content .main .rules-unordered-list-point {
   color: #c9c9c9;
   font-weight: 200;
+  font-size: 0.75rem;
+}
+body .content .main .rules .applying-point-1-styled-text {
+  color: #00b285;
+  font-weight: 500;
+}
+body .content .main .additional-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+body .content .main .additional-info .timing-info {
+  display: flex;
+  flex-direction: column;
+  background-color: #363636;
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+body .content .main .additional-info .timing-info-text {
+  margin: 0;
   font-size: 0.75rem;
 }/*# sourceMappingURL=styles.css.map */

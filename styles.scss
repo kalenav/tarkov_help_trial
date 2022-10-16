@@ -45,7 +45,7 @@ $lightgreen: #00b285;
 $light-gray: #c9c9c9;
 $gray: #363636;
 $white: #fff;
-$beige: #ceC7a6;
+$beige: #cec7a6;
 $hint-text-color: #ababab;
 
 * {
@@ -127,12 +127,15 @@ body {
         .main {
             @include flex-row;
 
+            margin-top: $default-offset-double;
+
             .rules {
                 @include flex-column;
 
                 &-header {
                     color: $lightgreen;
                     font-size: $font-size-big;
+                    margin-top: 0;
                 }
 
                 &-point {
@@ -188,6 +191,29 @@ body {
                     &-point {
                         color: $light-gray;
                         font-weight: 200;
+                        font-size: $font-size-small;
+                    }
+                }
+
+                .applying-point-1-styled-text {
+                    color: $lightgreen;
+                    font-weight: 500;
+                }
+            }
+
+            .additional-info {
+                @include flex-column;
+                align-items: flex-end;
+
+                .timing-info {
+                    @include flex-column;
+
+                    background-color: $gray;
+                    border-radius: $default-border-radius;
+                    padding: $default-offset;
+
+                    &-text {
+                        margin: 0;
                         font-size: $font-size-small;
                     }
                 }

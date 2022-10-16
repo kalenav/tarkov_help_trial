@@ -42,6 +42,9 @@ const TournamentModule = (() => {
         'requirements-point-4': 'умение говорить хорошо на русском языке',
         'requirements-point-5': 'не нарушать правила плафтормы Twitch',
         'requirements-point-6': 'жить в регионах России',
+        'timing-info-header': 'Время проведения турнира',
+        'timing-info-dates': 'Прием заявок: 12-20 апреля',
+        'timing-info-start': 'Проведение турнира: 23 апреля',
     }
 
     function appendTextToTag(id, text) {
