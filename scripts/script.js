@@ -45,6 +45,9 @@ const TournamentModule = (() => {
         'timing-info-header': 'Время проведения турнира',
         'timing-info-dates': 'Прием заявок: 12-20 апреля',
         'timing-info-start': 'Проведение турнира: 23 апреля',
+        'main-apply-button': 'Записаться на турнир',
+        'location-header': 'Локация:',
+        'location-text': 'Таможня',
     }
 
     function appendTextToTag(id, text) {

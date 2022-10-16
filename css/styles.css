@@ -55,6 +55,7 @@ body .content .header-apply-button {
   padding: 0.75rem 2rem;
   margin-top: auto;
   border-radius: 0.25rem;
+  border: none;
 }
 body .content .header-apply-button:hover {
   cursor: pointer;
@@ -75,7 +76,7 @@ body .content .main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 body .content .main .rules {
   display: flex;
@@ -139,15 +140,64 @@ body .content .main .additional-info {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  width: 35%;
+  margin-left: 2rem;
+}
+body .content .main .additional-info-item {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+body .content .main .additional-info-item.main-apply-button {
+  width: auto;
 }
 body .content .main .additional-info .timing-info {
   display: flex;
   flex-direction: column;
   background-color: #363636;
   border-radius: 0.25rem;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
 }
 body .content .main .additional-info .timing-info-text {
-  margin: 0;
+  margin: 0 0 0.25rem 0;
   font-size: 0.75rem;
+  font-weight: 300;
+}
+body .content .main .additional-info .timing-info-header {
+  color: #fff;
+  font-weight: 500;
+}
+body .content .main .additional-info .timing-info-dates, body .content .main .additional-info .timing-info-start {
+  color: #cec7a6;
+}
+body .content .main .additional-info .location {
+  position: relative;
+}
+body .content .main .additional-info .location-image {
+  width: 100%;
+}
+body .content .main .additional-info .location-text-block {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+}
+body .content .main .additional-info .location-text-block-header {
+  color: #cec7a6;
+}
+body .content .main .additional-info .location-text-block-content {
+  color: #fff;
+  font-size: 0.75rem;
+}
+body .content .main .additional-info .location-text-block-header, body .content .main .additional-info .location-text-block-content {
+  margin: 0.25rem 0;
+}
+body .content .main .additional-info .main-apply-button {
+  color: #00b285;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid #00b285 0.1rem;
+  padding: 0.75rem 2rem;
+  border-radius: 0.25rem;
+}
+body .content .main .additional-info .main-apply-button:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

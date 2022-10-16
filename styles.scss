@@ -32,12 +32,16 @@ $font-size-medium: $default-font-size * 1.2;
 $font-size-big: $default-font-size * 1.5;
 $font-size-large: $default-font-size * 2;
 
+$default-border-width: 0.1rem;
+
 $default-border-radius: 0.25rem;
 $border-radius-medium: $default-border-radius * 2;
 $border-radius-small: calc($default-border-radius / 2);
 
 $header-image-width: 25rem;
 $header-image-container-width: $header-image-width + $offset-large;
+
+$additional-info-container-width: 35%;
 
 $dark-gray: #222;
 $orange: #ffc165;
@@ -104,6 +108,7 @@ body {
                 padding: $offset-small $default-offset-double;
                 margin-top: auto;
                 border-radius: $default-border-radius;
+                border: none;
 
                 &:hover {
                     cursor: pointer;
@@ -127,7 +132,7 @@ body {
         .main {
             @include flex-row;
 
-            margin-top: $default-offset-double;
+            margin-top: $offset-big;
 
             .rules {
                 @include flex-column;
@@ -204,17 +209,78 @@ body {
             .additional-info {
                 @include flex-column;
                 align-items: flex-end;
+                width: $additional-info-container-width;
+                margin-left: $default-offset-double;
+
+                &-item {
+                    margin-bottom: $default-offset;
+                    width: 100%;
+
+                    &.main-apply-button {
+                        width: auto;
+                    }
+                }
 
                 .timing-info {
                     @include flex-column;
 
                     background-color: $gray;
                     border-radius: $default-border-radius;
-                    padding: $default-offset;
+                    padding: $offset-small $default-offset;
 
                     &-text {
-                        margin: 0;
+                        margin: 0 0 $default-offset-quarter 0;
                         font-size: $font-size-small;
+                        font-weight: 300;
+                    }
+
+                    &-header {
+                        color: $white;
+                        font-weight: 500;
+                    }
+
+                    &-dates, &-start {
+                        color: $beige;
+                    }
+                }
+
+                .location {
+                    position: relative;
+
+                    &-image {
+                        width: 100%;
+                    }
+
+                    &-text-block {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        padding: $default-offset;
+
+                        &-header {
+                            color: $beige;
+                        }
+
+                        &-content {
+                            color: $white;
+                            font-size: $font-size-small;
+                        }
+
+                        &-header, &-content {
+                            margin: $default-offset-quarter 0;
+                        }
+                    }
+                }
+
+                .main-apply-button {
+                    color: $lightgreen;
+                    background-color: rgba(0, 0, 0, 0);
+                    border: solid $lightgreen $default-border-width;
+                    padding: $offset-small $default-offset-double;
+                    border-radius: $default-border-radius;
+    
+                    &:hover {
+                        cursor: pointer;
                     }
                 }
             }
