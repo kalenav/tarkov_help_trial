@@ -55,11 +55,14 @@ $header-image-container-width: $header-image-width + $offset-large;
 
 $additional-info-container-min-width: 20rem;
 $additional-info-container-max-width: 25rem;
+$additional-info-container-min-width-small-screen: 15rem;
+$additional-info-container-max-width-small-screen: 20rem;
+
+$additional-rewards-list-height: 3rem;
 
 $places-number: 4;
 $place-and-sponsor-width: calc((100% / #{$places-number}) - 2%);
-
-$additional-rewards-list-height: 3rem;
+$sponsor-min-width: 10rem;
 
 $default-transition-duration: 0.5s;
 
@@ -395,6 +398,7 @@ body {
                         border-radius: $default-border-radius;
                         background-color: $gray;
                         padding: $offset-small;
+                        min-width: $sponsor-min-width;
 
                         &-image {
                             margin-right: $default-offset;
@@ -454,6 +458,82 @@ body {
 
             .apply-modal-backdrop {
                 display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 1370px) {
+    body {
+        .content {
+            .header {
+                flex-direction: column;
+                align-items: center;
+
+                &-text {
+                    align-items: center;
+
+                    &-categories {
+                        text-align: center;
+                        margin-bottom: $default-offset;
+                    }
+                }
+
+                &-apply-button {
+                    margin-bottom: $default-offset-double;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        .content {
+            .main {
+                .additional-info {
+                    min-width: $additional-info-container-min-width-small-screen;
+                    max-width: $additional-info-container-max-width-small-screen;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    body {
+        .content {
+            .main {
+                flex-direction: column;
+
+                .additional-info {
+                    min-width: 0;
+                    max-width: 100%;
+                    margin-left: 0;
+                }
+            }
+
+            .footer {
+                &-point {
+                    .rewards {
+
+                        &-by-place {
+
+                            .place {
+
+                                &-header, &-reward {
+                                    font-size: $font-size-small;
+                                }
+                            }
+                        }
+                    }
+
+                    .additional-rewards {
+                        &-header {
+                            font-size: $font-size-small;
+                        }
+                    }
+                }
             }
         }
     }
