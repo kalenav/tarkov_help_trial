@@ -71,6 +71,8 @@ $gray: #363636;
 $white: #fff;
 $beige: #cec7a6;
 $hint-text-color: #ababab;
+$transparent: rgba(0, 0, 0, 0);
+$semi-transparent: rgba(0, 0, 0, 0.5);
 
 * {
     font-family: 'Inter', sans-serif;
@@ -289,7 +291,7 @@ body {
                     @include flex-centered;
 
                     color: $lightgreen;
-                    background-color: rgba(0, 0, 0, 0);
+                    background-color: $transparent;
                     border: solid $lightgreen $default-border-width;
                     padding: $offset-small 0;
                     border-radius: $default-border-radius;
@@ -403,6 +405,55 @@ body {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .apply-modal {
+        @include flex-centered;
+
+        opacity: 0;
+        visibility: hidden;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $semi-transparent;
+
+        &-backdrop {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        &-form {
+            @include flex-column;
+            padding: $default-offset;
+            border-radius: $default-border-radius;
+            background-color: $white;
+
+            &-input {
+                border-radius: $default-border-radius;
+                margin-bottom: $default-offset-quarter;
+            }
+
+            &-submit {
+                max-width: 50%;
+                margin-left: auto;
+            }
+        }
+
+        &.displayed {
+            opacity: 1;
+            visibility: visible;
+
+            .apply-modal-backdrop {
+                display: block;
             }
         }
     }

@@ -79,9 +79,14 @@ const TournamentModule = (() => {
         document.getElementById('additional-rewards-list').classList.toggle('displayed');
     }
 
+    function toggleApplyModal() {
+        document.getElementById('apply-modal').classList.toggle('displayed');
+    }
+
     return {
         initPageText,
         toggleAdditionalRewards,
+        toggleApplyModal,
     }
 })();
 

@@ -18,7 +18,7 @@
                     <p class="category" id="header-text-categories-first"></p>
                     <p class="category" id="header-text-categories-second"></p>
                 </div>
-                <button class="header-apply-button" id="header-apply-button"></button>
+                <button class="header-apply-button" id="header-apply-button" onclick="TournamentModule.toggleApplyModal()"></button>
             </div>
             <div class="header-image-container">
                 <img class="header-image" src="assets/header-image.png">
@@ -121,7 +121,7 @@
                         <p class="location-text-block-content" id="location-text"></p>
                     </div>
                 </div>
-                <button class="main-apply-button additional-info-item" id="main-apply-button"></button>
+                <button class="main-apply-button additional-info-item" id="main-apply-button" onclick="TournamentModule.toggleApplyModal()"></button>
             </div>
         </section>
         <section class="footer">
@@ -164,6 +164,18 @@
                 </div>
             </div>
         </section>
+    </div>
+    <div class="apply-modal" id="apply-modal">
+        <div class="apply-modal-backdrop" onclick="TournamentModule.toggleApplyModal()"></div>
+        <form class="apply-modal-form">
+            <label for="email">E-mail</label>
+            <input type="text" id="email" class="apply-modal-form-input">
+            <label for="twitch-nick">Ник на Twitch</label>
+            <input type="text" id="twitch-nick" class="apply-modal-form-input">
+            <label for="comment">Комментарии</label>
+            <input type="text" id="comment" class="apply-modal-form-input">
+            <input type="submit" value="Отправить" class="apply-modal-form-submit">
+        </form>
     </div>
     <script src="scripts/script.js"></script>
   </body>
